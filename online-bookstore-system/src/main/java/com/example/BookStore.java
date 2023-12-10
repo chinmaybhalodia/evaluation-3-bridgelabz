@@ -31,4 +31,16 @@ public class BookStore {
     public void printStock() {
         System.out.println(stock.toString());
     }
+
+    public int getTotalUsers() {
+        return this.users.size();
+    }
+
+    public int getTotalBooks() {
+        return this.books.size();
+    }
+
+    public int getStockByISBN(String ISBN) {
+        return stock.containsKey(ISBN) ? stock.get(ISBN) : 0;
+    }
 }
